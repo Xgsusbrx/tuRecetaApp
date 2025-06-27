@@ -25,3 +25,4 @@ Una aplicación para calcular el costo de los ingredientes de una receta, desarr
 ---
 
 Desarrollado por [@Xgsusbrx](https://github.com/Xgsusbrx)
+![alt text](src/captura.png)
