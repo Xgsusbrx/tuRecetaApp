@@ -1,0 +1,82 @@
+/* TuRecetaApp.css */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+  justify-content: center;
+  display: grid;
+
+
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fefefe;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+  text-align: center;
+  color: #015958;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.descripcion {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.formulario,
+.resultados {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:read-only {
+  background-color: #eee;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+.boton {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background-color: #015958;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #008F8C;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+  }
+}
