@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./TuRecetaApp.css"; // Asegurate de importar el archivo CSS
+import "./TuRecetaApp.css"; 
 
 export const TuRecetaApp = () => {
   const [ingrediente, setIngrediente] = useState("");
