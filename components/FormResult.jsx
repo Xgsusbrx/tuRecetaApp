@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 
-export const FormResult = ({precioCostoTotal}) => {
+export const FormResult = ({precioCostoTotal,unidades,precioUnidad,setUnidades}) => {
 
-const [unidades, setUnidades] = useState(0);
+
   
 
   return (

@@ -1,25 +1,13 @@
-import { useState } from "react";
-import { Button } from "./Button";
+import React from 'react';
 
 
-export const Form = () => {
+export const Form = ({onSubmit, ingrediente, precio, cantidadFabrica,cantidadReceta,precioCosto,setIngrediente,setPrecio,setCantidadFabrica,setCantidadReceta, aggIngrediente}) => {
 
 
-  
-  //estados inciales de la app 
+   
 
 
-  const precioCosto =
-    cantidadFabrica > 0 ? (precio / cantidadFabrica) * cantidadReceta : 0;
-
-    const onSubmit = (e) => {
-    e.preventDefault();
-    
-  };
-
-
-  return (
-    
+  return ( 
 
 
 
@@ -54,7 +42,12 @@ export const Form = () => {
 
         <label>Precio costo del ingrediente</label>
         <input type="number" value={precioCosto} readOnly />
-        <Button precioCosto={precioCosto} setIngrediente={setIngrediente}setPrecio={setPrecio} setCantidadFabrica={setCantidadFabrica}setCantidadReceta={setCantidadReceta}/>
+
+        <button className="boton" type="button" onClick={aggIngrediente}>
+        agrega ingrediente
+      </button>
+
+        
       </form>
 
      
