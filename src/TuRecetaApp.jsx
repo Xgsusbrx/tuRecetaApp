@@ -32,12 +32,14 @@ export const TuRecetaApp = () => {
   };
   const aggIngrediente = () => {
     setPrecioCostoTotal(precioCostoTotal + precioCosto);
+    setIngredientes([...ingredientes, ingrediente])
     setIngrediente("");
     setPrecio(0);
     setCantidadFabrica(0);
     setCantidadReceta(0);
   };
 
+  console.log("ingredientes", ingredientes);
   return (
     <div className="app-container">
       <h1 className="titulo">Calcula el Precio Costo de tu Receta</h1>
@@ -61,7 +63,7 @@ export const TuRecetaApp = () => {
 
       
 
-      <Ingredients ingredientes={ingredientes} />
+      {ingredientes.length > 0 && <Ingredients ingredientes={ingredientes} />}
       <FormResult
         unidades={unidades}
         setUnidades={setUnidades}
