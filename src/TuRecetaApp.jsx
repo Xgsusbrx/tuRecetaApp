@@ -5,6 +5,7 @@ import { FormResult } from "../components/FormResult";
 
 import "./TuRecetaApp.css";
 import { Ingredients } from "../components/Ingredients";
+import { Calculos } from "../hooks/Calculos";
 
 export const TuRecetaApp = () => {
   //estados
@@ -15,14 +16,14 @@ export const TuRecetaApp = () => {
   const [cantidadReceta, setCantidadReceta] = useState(0);
   const [unidades, setUnidades] = useState(0);
   const [precioCostoTotal, setPrecioCostoTotal] = useState(0);
-
-  // formulas
-  const precioCosto =
-    cantidadFabrica > 0 ? (precio / cantidadFabrica) * cantidadReceta : 0;
-
-  const precioUnidad = precioCostoTotal / unidades;
+ const {precioUnidad,precioCosto} = Calculos( cantidadFabrica,
+  precio,
+  cantidadReceta,
+  precioCostoTotal,
+  unidades)
+ 
   // funciones
-
+console.log(precioCosto);
   const onSubmit = (e) => {
     e.preventDefault();
     if (ingrediente) {
@@ -39,7 +40,7 @@ export const TuRecetaApp = () => {
     setCantidadReceta(0);
   };
 
-  console.log("ingredientes", ingredientes);
+  
   return (
     <div className="app-container">
       <h1 className="titulo">Calcula el Precio Costo de tu Receta</h1>

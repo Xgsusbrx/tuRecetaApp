@@ -44,7 +44,7 @@ export const Form = ({onSubmit, ingrediente, precio, cantidadFabrica,cantidadRec
         <input type="number" value={precioCosto} readOnly />
 
         <button className="boton" type="button" onClick={aggIngrediente}>
-        agrega ingrediente
+        Agregar ingrediente
       </button>
 
         
