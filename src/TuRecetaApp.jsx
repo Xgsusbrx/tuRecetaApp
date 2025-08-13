@@ -1,11 +1,5 @@
 import { useState } from "react";
-import { Form } from "../components/Form";
-
-import { FormResult } from "../components/FormResult";
-
-import "./TuRecetaApp.css";
-import { Ingredients } from "../components/Ingredients";
-import { Calculos } from "../hooks/Calculos";
+import "./TuRecetaApp.css"; 
 
 export const TuRecetaApp = () => {
   //estados
