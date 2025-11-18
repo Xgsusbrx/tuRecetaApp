@@ -12,3 +12,4 @@ export const Calculos = (cantidadFabrica,precio,cantidadReceta,precioCostoTotal,
 
   }
 }
+ 

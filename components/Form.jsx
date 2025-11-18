@@ -1,7 +1,7 @@
-import React from 'react';
 
 
-export const Form = ({onSubmit, ingrediente, precio, cantidadFabrica,cantidadReceta,precioCosto,setIngrediente,setPrecio,setCantidadFabrica,setCantidadReceta, aggIngrediente}) => {
+
+export const Form = ({onSubmit, ingrediente, precio, cantidadFabrica,cantidadReceta,precioCosto,setIngrediente,setPrecio,setCantidadFabrica,setCantidadReceta, aggIngrediente,handleFocus}) => {
 
 
    
@@ -24,6 +24,14 @@ export const Form = ({onSubmit, ingrediente, precio, cantidadFabrica,cantidadRec
           type="number"
           value={precio}
           onChange={(e) => setPrecio(Number(e.target.value))}
+          onFocus={(e) => {
+            if (e.target.value === "0")
+             setPrecio("")
+          
+          
+            }}
+               
+
         />
 
         <label>Cantidad de fábrica (en gramos, mililitros o unidades )</label>
@@ -31,6 +39,11 @@ export const Form = ({onSubmit, ingrediente, precio, cantidadFabrica,cantidadRec
           type="number"
           value={cantidadFabrica}
           onChange={(e) => setCantidadFabrica(Number(e.target.value))}
+          onFocus = {(e) => {
+            if (e.target.value === "0") {
+              setCantidadFabrica("")
+            }
+          }}
         />
 
         <label>Cantidad en la receta</label>
@@ -38,6 +51,11 @@ export const Form = ({onSubmit, ingrediente, precio, cantidadFabrica,cantidadRec
           type="number"
           value={cantidadReceta}
           onChange={(e) => setCantidadReceta(Number(e.target.value))}
+          onFocus={(e) => {
+            if (e.target.value === "0"){
+              setCantidadReceta("")
+            }
+          }}
         />
 
         <label>Precio costo del ingrediente</label>

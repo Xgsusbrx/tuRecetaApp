@@ -10,6 +10,7 @@ export const TuRecetaApp = () => {
   const [cantidadReceta, setCantidadReceta] = useState(0);
   const [unidades, setUnidades] = useState(0);
   const [precioCostoTotal, setPrecioCostoTotal] = useState(0);
+  
  const {precioUnidad,precioCosto} = Calculos( cantidadFabrica,
   precio,
   cantidadReceta,
@@ -17,7 +18,7 @@ export const TuRecetaApp = () => {
   unidades)
  
   // funciones
-console.log(precioCosto);
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (ingrediente) {
@@ -33,6 +34,9 @@ console.log(precioCosto);
     setCantidadFabrica(0);
     setCantidadReceta(0);
   };
+  const handleFocus = (setter, value) => {
+  if (value === "0") setter("")
+ }
 
   
   return (
@@ -54,6 +58,7 @@ console.log(precioCosto);
         setCantidadReceta={setCantidadReceta}
         onSubmit={onSubmit}
         aggIngrediente={aggIngrediente}
+        handleFocus={handleFocus}
       />
 
       

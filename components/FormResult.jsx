@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 export const FormResult = ({precioCostoTotal,unidades,precioUnidad,setUnidades}) => {
-
+ 
 
   
 
@@ -15,6 +15,12 @@ export const FormResult = ({precioCostoTotal,unidades,precioUnidad,setUnidades})
           type="number"
           value={unidades}
           onChange={(e) => setUnidades(Number(e.target.value))}
+          onFocus={(e) => {
+            if (e.target.value === "0")
+             setUnidades("")
+        
+        }          }
+         
         />
 
         <label>Costo total de la preparación</label>
